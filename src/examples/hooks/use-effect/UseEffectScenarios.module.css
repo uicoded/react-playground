@@ -1,0 +1,97 @@
+.container {
+  padding: 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.scenario {
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.scenarioTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  margin-bottom: 0.5rem;
+}
+
+.primaryButton {
+  padding: 0.25rem 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.25rem;
+  border: none;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  background-color: #2563eb;
+}
+
+.secondaryButton {
+  padding: 0.25rem 0.75rem;
+  background-color: #6b7280;
+  color: white;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background-color: #4b5563;
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  border: 1px solid #d1d5db;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.fullWidthInput {
+  border: 1px solid #d1d5db;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.idLabel {
+  margin-left: 0.5rem;
+}
+
+.messageList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}

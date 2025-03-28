@@ -1,5 +1,5 @@
 import UseEffect_Cleanup from "./UseEffect-cleanup";
-import UseEffect_authStatus from "../UseEffect-auth-status";
+import UseEffect_authStatus from "./UseEffect-auth-status";
 import UseEffect_dataFetch from "./UseEffect-data-fetch";
 import UseEffect_derivedState from "./UseEffect-derived-state";
 import UseEffect_externalSync from "./UseEffect-external-sync";

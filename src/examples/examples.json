@@ -1,0 +1,97 @@
+{
+  "examples": {
+    "home": [
+      {
+        "name": "Hello World",
+        "path": "App_default.tsx"
+      }
+    ],
+    "misc": [
+      {
+        "name": "Error Boundary",
+        "path": "App_error-boundary.tsx"
+      },
+      {
+        "name": "Using Keys",
+        "path": "App_using-keys.tsx"
+      }
+    ],
+    "forms": [
+      {
+        "name": "Uncontrolled Inputs Default Value",
+        "path": "forms/App_forms-uncontrolled-inputs-default-value"
+      }
+    ],
+    "hooks/use-state": [
+      {
+        "name": "Use State",
+        "path": "hooks/use-state/App_hooks-use-state.tsx"
+      },
+      {
+        "name": "Use State Initial Value",
+        "path": "hooks/use-state/App_hooks-use-state-initial-value.tsx"
+      }
+    ],
+    "hooks/use-effect": [
+      {
+        "name": "Use Effect",
+        "path": "hooks/use-effect/App_hooks-use-effect.tsx"
+      },
+      {
+        "name": "Use Effect Scenarios",
+        "path": "hooks/use-effect/App_hooks-use-effect-scenarios.tsx"
+      },
+      {
+        "name": "Use Effect Conditional",
+        "path": "hooks/use-effect/App_hooks-use-effect-conditional.tsx"
+      },
+      {
+        "name": "Use Effect Set Interval",
+        "path": "hooks/use-effect/App_hooks-use-effect-set-interval.tsx"
+      }
+    ],
+    "hooks/use-ref": [
+      {
+        "name": "Use Ref NW",
+        "path": "hooks/use-ref/App_hooks-use-ref-nw.tsx"
+      },
+      {
+        "name": "Use Ref",
+        "path": "hooks/use-ref/App_hooks-use-ref.tsx"
+      }
+    ],
+    "hooks/use-id": [
+      {
+        "name": "Use ID",
+        "path": "hooks/use-id/App_hooks-use-id.tsx"
+      }
+    ],
+    "styles": [
+      {
+        "name": "3 Ways Adding Style",
+        "path": "styles/App_3-ways-adding-style.tsx"
+      },
+      {
+        "name": "Styled Box",
+        "paths": [
+          "styles/App_styled-box.css",
+          "styles/App_styled-box.tsx"
+        ]
+      }
+    ],
+    "local-storage": [
+      {
+        "name": "Local Storage Dynamic Value",
+        "path": "local-storage/App_local-storage-dynamic-value.tsx"
+      },
+      {
+        "name": "Local Storage Hook",
+        "path": "local-storage/App_local-storage-hook.tsx"
+      },
+      {
+        "name": "Local Storage Immediate Value",
+        "path": "local-storage/App_local-storage-immediate-value.tsx"
+      }
+    ]
+  }
+}

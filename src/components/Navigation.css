@@ -1,0 +1,104 @@
+.list-nav {
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.category-list, .subcategory-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.subcategory-list {
+  padding-left: 16px;
+  border-left: 1px solid #ccc;
+  margin-left: 8px;
+}
+
+.category-heading {
+  margin: 8px 0;
+}
+
+/* If you want to highlight the active category * /
+ .category-heading-active button{
+  background-color: #e0e0e0;
+  color: black;
+} */
+
+/* Category selected no item inside clicked */
+.category-heading-active.active button{
+  background-color: #e0e0e0;
+  color: black;
+}
+
+/* Ensure the button's flex layout keeps the icon separate */
+.category-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.category-button:hover {
+  background-color: #d0d0d0;
+  color: #222;
+}
+
+.category-button:focus {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+
+.toggle-icon {
+  width: .8em;
+  height: .8em;
+  margin-left: 0.5em;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the chevron icon when category is expanded */
+.category-heading-active .toggle-icon {
+  transform: rotate(90deg);
+}
+
+.nav-item {
+  margin: 8px 0;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #2196f3;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-item a:hover {
+  background-color: #e3f2fd;
+  color: #222;
+}
+
+.nav-item a:focus {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+
+.nav-item a.active {
+  background-color: #bbdefb;
+  font-weight: bold;
+}
+
+/* Possible Styling for different nesting levels * /
+.category-level-0 > .category-header-wrapper .category-button {}
+.category-level-1 > .category-header-wrapper .category-button {}
+...
+*/

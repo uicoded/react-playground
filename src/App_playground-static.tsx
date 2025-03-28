@@ -1,5 +1,5 @@
 // Swap this 👇 for the example app that you're testing
-import App from './App_default.tsx'
+import App from './examples/App_default.tsx'
 // import App from './examples/forms/App_forms-uncontrolled-inputs-default-value'
 // import App from './examples/App_error-boundary.tsx'
 // import App from './examples/hooks/use-state/App_hooks-use-state.tsx'

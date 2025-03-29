@@ -12,10 +12,9 @@ export default function Playground() {
   const [selectedExample, setSelectedExample] = useState<ExampleItem>({name: "home", path: "App_default.tsx"});
 
   const handleExampleSelect = (item: ExampleItem) => {
-    if (item.path) {
+    if (item.path || item.paths) {
       setSelectedExample(item);
     }
-    // TODO: item.paths
   };
 
   return (

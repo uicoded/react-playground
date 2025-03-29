@@ -79,6 +79,24 @@
         ]
       }
     ],
+    "dynamic-load": [
+      {
+        "name": "Load with dynamic import",
+        "path": "dynamic-load/App_dynamic-component.tsx"
+      },
+      {
+        "name": "Load with lazy",
+        "path": "dynamic-load/App_lazy-load-component.tsx"
+      },
+      {
+        "name": "Load with lazy with click",
+        "path": "dynamic-load/App_lazy-load-component-with-click.tsx"
+      },
+      {
+        "name": "Regular without lazy",
+        "path": "dynamic-load/App_without-lazy-load.tsx"
+      }
+    ],
     "local-storage": [
       {
         "name": "Local Storage Dynamic Value",

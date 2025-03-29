@@ -90,4 +90,5 @@ function Navigation({ data, onExampleSelect, selectedItem: propSelectedItem, mul
 }
 ```
 
-This approach keeps your styles modular, maintainable, and properly encapsulated with the components they belong to, which becomes increasingly important as the application grows.
+This approach keeps your styles modular, maintainable, and properly encapsulated with the components they belong to,
+which becomes increasingly important as the application grows.

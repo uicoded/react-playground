@@ -17,6 +17,25 @@
     filter: drop-shadow(0 0 2em #61dafbaa);
   }
 
+  .github-logo {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 2em;
+    will-change: filter;
+    transition: filter 300ms;
+    margin: 0 auto;
+
+    .logo {
+      height: 2em;
+      padding: .5em;
+    }
+  }
+
+  .github-logo:hover {
+    filter: drop-shadow(0 0 1em #646cffaa);
+  }
+
   .card {
     padding: 2em;
   }

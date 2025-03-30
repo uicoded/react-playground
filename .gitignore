@@ -3,6 +3,7 @@ node_modules
 
 #Compile
 dist
+src/utils/generatedImports.ts
 
 # Cache
 .cache

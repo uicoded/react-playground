@@ -6,22 +6,6 @@
         "path": "App_default.tsx"
       }
     ],
-    "misc": [
-      {
-        "name": "Error Boundary",
-        "path": "App_error-boundary.tsx"
-      },
-      {
-        "name": "Using Keys",
-        "path": "App_using-keys.tsx"
-      }
-    ],
-    "forms": [
-      {
-        "name": "Uncontrolled Inputs Default Value",
-        "path": "forms/App_forms-uncontrolled-inputs-default-value"
-      }
-    ],
     "hooks/use-state": [
       {
         "name": "Use State",

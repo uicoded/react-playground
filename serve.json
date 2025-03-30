@@ -1,0 +1,21 @@
+{
+  "rewrites": [
+    { "source": "**/*.js", "destination": "/index.html" },
+    { "source": "**/*.js.map", "destination": "/index.html" },
+    { "source": "**", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "**/*.js",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" }
+      ]
+    },
+    {
+      "source": "**/*.js.map",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    }
+  ]
+}

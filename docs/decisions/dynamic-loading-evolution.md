@@ -23,10 +23,10 @@ Prebuild step (`scripts/build-component-map.ts`) generates a component map `src/
 
 - Build the prod.  
   Code splitting works based on a single config `examples/examples.json`, does not require `vite.config.ts` manual adjustments (in two places) or ambiguous import all from the `src/examples` route.
+- Works with Suspense.
 
 ### Cons
 
 - Seems to be slower.
 - More complex.
 - Additiona prebuild step.
-- Works with Suspense.

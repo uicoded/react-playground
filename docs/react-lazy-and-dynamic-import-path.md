@@ -55,14 +55,11 @@
    );
    ```
 
----
-
 ### 🔥 When Should You Use `React.lazy()`?
 - When you want to **code-split** and **load components on demand**.
 - When you are **sure** about the import paths at build time.
 - When you are using **React Router** to optimize loading for different pages.
 
----
 
 ### ❌ What You *Cannot* Do with `React.lazy()`
 1. **You can't pass a dynamic import path** because `import()` must be static.
@@ -74,6 +71,8 @@
 2. **You can't use it for dynamically changing components based on props.** Instead, you must use a workaround like `useState` + `useEffect` 
 
 ---
+
+## Dynamic Import without `React.lazy()`
 
 You cannot directly use `React.lazy` with a dynamic import path because `import()` only works with static strings. However, you can work around this by using a wrapper component that dynamically imports the correct module whenever the path prop changes.
 
@@ -89,23 +88,32 @@ import React, { Suspense, useState, useEffect } from "react";
 
 const DynamicComponent = ({ filePath }) => {
   const [Component, setComponent] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (!filePath) return;
 
+    setLoading(true);
+    setError(null);
+
     import(/* @vite-ignore */ `${filePath}`)
       .then((mod) => setComponent(() => mod.default))
-      .catch((err) => console.error("Error loading component:", err));
+      .catch((err) => {
+        console.error("Error loading component:", err);
+        setError(err);
+      })
+      .finally(() => setLoading(false));
   }, [filePath]);
 
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      {Component ? <Component /> : <div>Component not found</div>}
-    </Suspense>
-  );
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading component</div>;
+  if (!Component) return <div>Component not found</div>;
+
+  return <Component />;
 };
 
-// Example usage in a parent component:
+// Example usage:
 const App = () => {
   const [path, setPath] = useState("./components/MyComponent");
 
@@ -126,3 +134,31 @@ export default App;
 - The `filePath` prop is dynamically passed.
 - The component is reloaded whenever `filePath` changes.
 - `import(/* @vite-ignore */ `${filePath}`)` is used to prevent Vite from processing the path statically.
+
+### Potential Issues with Dynamic Imports in Vite
+
+Vite uses static imports for optimal bundling, and dynamic imports with variables might not work as expected.
+Instead of a fully dynamic filePath, consider mapping known components explicitly:
+
+```tsx
+const components = {
+  myComponent: lazy(() => import("./components/MyComponent")),
+  anotherComponent: lazy(() => import("./components/AnotherComponent")),
+};
+
+const DynamicComponent = ({ componentKey }) => {
+  const Component = components[componentKey];
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      {Component ? <Component /> : <div>Component not found</div>}
+    </Suspense>
+  );
+};
+```
+
+This approach avoids bundling issues with Vite and keeps the benefits of lazy loading.
+
+It Uses `lazy(() => import(...))` instead of `useEffect` + `useState` for imports.
+Avoid dynamic string imports with Vite, as they may not work correctly.
+Use an explicit component map if dynamically importing multiple known components.

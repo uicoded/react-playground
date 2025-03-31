@@ -87,6 +87,12 @@
         "path": "dynamic-load/App_without-lazy-load.tsx"
       }
     ],
+    "suspense": [
+      {
+        "name": "Suspense with use hook",
+        "path": "suspense/App_suspense-with-use-hook.tsx"
+      }
+    ],
     "local-storage": [
       {
         "name": "Local Storage Dynamic Value",

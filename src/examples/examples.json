@@ -50,6 +50,12 @@
         "path": "hooks/use-id/App_hooks-use-id.tsx"
       }
     ],
+    "hooks/use": [
+      {
+        "name": "Use",
+        "path": "hooks/use/App_hooks-use.tsx"
+      }
+    ],
     "styles": [
       {
         "name": "3 Ways Adding Style",

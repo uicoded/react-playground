@@ -54,7 +54,8 @@ function Example({ item }: ExampleProps) {
       console.log(`Loading component from exampleMap: ${path}`);
       setExampleComponent(() => exampleMap[path]);
     } else {
-      console.log(`Component not found in exampleMap, trying direct import: ${path}`);
+      console.log(`Component not found in exampleMap, path: ${path}`);
+      // console.log(`Component not found in exampleMap, trying direct import: ${path}`);
       // Try to import if not in the map
       // try {
       //   const componentPath = path.replace('.tsx', '');

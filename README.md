@@ -17,7 +17,7 @@ Find all examples here: https://github.com/uicoded/react-playground
 Clone this repo, install and run (`npm run dev`).  
 Use your editor to browse the code and your browser to preview all examples.
 
-Looking at `main.tsx` you can see that there is `Playground` component that eighter imports examples statically (inside `./App_playground-static.tsx`) or dynamically (inside `./App_playground.tsx`). The former enables you to test (and isolate) your examples by linking imports manually. The latter is used to preview all examples in the browser without constantly changing the `App` for imports by updating an `example.json` file.
+Looking at `main.tsx` you can see that there is `Playground` component that eighter imports examples statically (inside `./App_playground-static.tsx`) or dynamically (inside `./App_playground.tsx`). The former enables you to test (and isolate) your examples by linking imports manually. The latter is used to preview all examples in the browser without constantly changing the `App` for imports by updating an `example.json` file and running `npm run examples`.
 
 ### `examples.json` file
 

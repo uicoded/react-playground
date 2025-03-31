@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/generate-imports.js",
+    "examples": "node scripts/generate-imports.js",
+    "prebuild": "examples",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

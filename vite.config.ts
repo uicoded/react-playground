@@ -7,6 +7,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
+  base: '/react-playground/', // This sets the base path for all assets (use it for the uicoded.com/react-playground)
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')

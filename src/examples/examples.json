@@ -50,6 +50,12 @@
         "path": "hooks/use-id/App_hooks-use-id.tsx"
       }
     ],
+    "hooks/use-transition": [
+      {
+        "name": "Use Transition",
+        "path": "hooks/use-transition/App_hooks-use-transition.tsx"
+      }
+    ],
     "styles": [
       {
         "name": "3 Ways Adding Style",

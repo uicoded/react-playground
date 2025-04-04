@@ -50,12 +50,6 @@
         "path": "hooks/use-id/App_hooks-use-id.tsx"
       }
     ],
-    "hooks/use": [
-      {
-        "name": "Use",
-        "path": "hooks/use/App_hooks-use.tsx"
-      }
-    ],
     "styles": [
       {
         "name": "3 Ways Adding Style",
@@ -69,7 +63,7 @@
         ]
       }
     ],
-    "dynamic-load": [
+    "async/dynamic-load": [
       {
         "name": "Load with dynamic import",
         "path": "dynamic-load/App_dynamic-component.tsx"
@@ -87,13 +81,23 @@
         "path": "dynamic-load/App_without-lazy-load.tsx"
       }
     ],
-    "suspense": [
+    "async/suspense": [
       {
         "name": "Suspense with use hook",
         "path": "suspense/App_suspense-with-use-hook.tsx"
+      },
+      {
+        "name": "Suspense with use hook and error boundary",
+        "path": "suspense/App_suspense-error-boundary-use-hook.tsx"
       }
     ],
-    "local-storage": [
+    "api/use": [
+      {
+        "name": "Use",
+        "path": "use/App_use.tsx"
+      }
+    ],
+    "browser-api/local-storage": [
       {
         "name": "Local Storage Dynamic Value",
         "path": "local-storage/App_local-storage-dynamic-value.tsx"

@@ -83,12 +83,12 @@
     ],
     "async/suspense": [
       {
-        "name": "Suspense with use hook",
-        "path": "suspense/App_suspense-with-use-hook.tsx"
+        "name": "Suspense with use API",
+        "path": "suspense/App_suspense-with-use.tsx"
       },
       {
-        "name": "Suspense with use hook and error boundary",
-        "path": "suspense/App_suspense-error-boundary-use-hook.tsx"
+        "name": "Suspense with use API and error boundary",
+        "path": "suspense/App_suspense-with-use-error-boundary.tsx"
       }
     ],
     "api/use": [

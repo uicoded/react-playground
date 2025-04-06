@@ -116,6 +116,12 @@
         "name": "Local Storage Immediate Value",
         "path": "local-storage/App_local-storage-immediate-value.tsx"
       }
+    ],
+    "Components/modal": [
+      {
+        "name": "Overlay",
+        "path": "component-snippets/modal/App_overlay.tsx"
+      }
     ]
   }
 }

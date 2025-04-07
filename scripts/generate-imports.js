@@ -28,28 +28,19 @@ const generatedImports: Record<string, LazyComponent> = {};
 // Process all examples to create explicit imports
 Object.entries(examplesData.examples).forEach(([category, categoryExamples]) => {
   categoryExamples.forEach((example) => {
-    // Handle single path examples
-    if (example.path && example.path.endsWith('.tsx')) {
-      const path = example.path;
-      const componentPath = path.replace('.tsx', '');
-      const chunkName = `example-${componentPath.replace(/\//g, '-')}`;
+    // All examples now use paths array
+    const paths = example.paths || [];
 
-      fileContent += `// ${example.name || 'Unnamed example'}\n`;
-      fileContent += `generatedImports["${path}"] = React.lazy(() => import(/* @vite-chunk-name: "${chunkName}" */ "../examples/${componentPath}.tsx"));\n\n`;
-    }
+    // Process each path in the paths array
+    paths.forEach((path) => {
+      if (path.endsWith('.tsx')) {
+        const componentPath = path.replace('.tsx', '');
+        const chunkName = `example-${componentPath.replace(/\//g, '-')}`;
 
-    // Handle multiple paths examples
-    if (example.paths) {
-      example.paths.forEach((path) => {
-        if (path.endsWith('.tsx')) {
-          const componentPath = path.replace('.tsx', '');
-          const chunkName = `example-${componentPath.replace(/\//g, '-')}`;
-
-          fileContent += `// ${example.name || 'Unnamed example'} (from paths)\n`;
-          fileContent += `generatedImports["${path}"] = React.lazy(() => import(/* @vite-chunk-name: "${chunkName}" */ "../examples/${componentPath}.tsx"));\n\n`;
-        }
-      });
-    }
+        fileContent += `// ${example.name || 'Unnamed example'}\n`;
+        fileContent += `generatedImports["${path}"] = React.lazy(() => import(/* @vite-chunk-name: "${chunkName}" */ "../examples/${componentPath}.tsx"));\n\n`;
+      }
+    });
   });
 });
 

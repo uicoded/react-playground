@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     target: 'esnext',
+    outDir: 'dist/react-playground', // Set the output directory to dist/react-playground
   },
   base: '/react-playground/', // This sets the base path for all assets (use it for the uicoded.com/react-playground)
   resolve: {

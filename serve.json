@@ -1,14 +1,21 @@
 {
   "rewrites": [
-    { "source": "**/*.js", "destination": "/index.html" },
-    { "source": "**/*.js.map", "destination": "/index.html" },
-    { "source": "**", "destination": "/index.html" }
+    { "source": "/react-playground", "destination": "/react-playground/index.html" },
+    { "source": "/react-playground/", "destination": "/react-playground/index.html" },
+    { "source": "/", "destination": "/react-playground/index.html" },
+    { "source": "/**", "destination": "/react-playground/index.html" }
   ],
   "headers": [
     {
       "source": "**/*.js",
       "headers": [
         { "key": "Content-Type", "value": "application/javascript" }
+      ]
+    },
+    {
+      "source": "**/*.css",
+      "headers": [
+        { "key": "Content-Type", "value": "text/css" }
       ]
     },
     {

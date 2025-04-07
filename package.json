@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "examples": "node scripts/generate-imports.js",
-    "prebuild": "examples",
+    "prebuild": "npm run examples",
     "build": "vite build",
+    "postbuild": "node scripts/copy-css-files.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "serve": "serve -s dist --config ../serve.json"

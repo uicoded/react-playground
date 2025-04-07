@@ -3,63 +3,63 @@
     "home": [
       {
         "name": "Hello World",
-        "path": "App_default.tsx"
+        "paths": ["App_default.tsx"]
       }
     ],
     "hooks/use-state": [
       {
         "name": "Use State",
-        "path": "hooks/use-state/App_hooks-use-state.tsx"
+        "paths": ["hooks/use-state/App_hooks-use-state.tsx"]
       },
       {
         "name": "Use State Initial Value",
-        "path": "hooks/use-state/App_hooks-use-state-initial-value.tsx"
+        "paths": ["hooks/use-state/App_hooks-use-state-initial-value.tsx"]
       }
     ],
     "hooks/use-effect": [
       {
         "name": "Use Effect",
-        "path": "hooks/use-effect/App_hooks-use-effect.tsx"
+        "paths": ["hooks/use-effect/App_hooks-use-effect.tsx"]
       },
       {
         "name": "Use Effect Scenarios",
-        "path": "hooks/use-effect/App_hooks-use-effect-scenarios.tsx"
+        "paths": ["hooks/use-effect/App_hooks-use-effect-scenarios.tsx"]
       },
       {
         "name": "Use Effect Conditional",
-        "path": "hooks/use-effect/App_hooks-use-effect-conditional.tsx"
+        "paths": ["hooks/use-effect/App_hooks-use-effect-conditional.tsx"]
       },
       {
         "name": "Use Effect Set Interval",
-        "path": "hooks/use-effect/App_hooks-use-effect-set-interval.tsx"
+        "paths": ["hooks/use-effect/App_hooks-use-effect-set-interval.tsx"]
       }
     ],
     "hooks/use-ref": [
       {
         "name": "Use Ref NW",
-        "path": "hooks/use-ref/App_hooks-use-ref-nw.tsx"
+        "paths": ["hooks/use-ref/App_hooks-use-ref-nw.tsx"]
       },
       {
         "name": "Use Ref",
-        "path": "hooks/use-ref/App_hooks-use-ref.tsx"
+        "paths": ["hooks/use-ref/App_hooks-use-ref.tsx"]
       }
     ],
     "hooks/use-id": [
       {
         "name": "Use ID",
-        "path": "hooks/use-id/App_hooks-use-id.tsx"
+        "paths": ["hooks/use-id/App_hooks-use-id.tsx"]
       }
     ],
     "hooks/use-transition": [
       {
         "name": "Use Transition",
-        "path": "hooks/use-transition/App_hooks-use-transition.tsx"
+        "paths": ["hooks/use-transition/App_hooks-use-transition.tsx"]
       }
     ],
     "styles": [
       {
         "name": "3 Ways Adding Style",
-        "path": "styles/App_3-ways-adding-style.tsx"
+        "paths": ["styles/App_3-ways-adding-style.tsx"]
       },
       {
         "name": "Styled Box",
@@ -72,55 +72,55 @@
     "async/dynamic-load": [
       {
         "name": "Load with dynamic import",
-        "path": "dynamic-load/App_dynamic-component.tsx"
+        "paths": ["dynamic-load/App_dynamic-component.tsx"]
       },
       {
         "name": "Load with lazy",
-        "path": "dynamic-load/App_lazy-load-component.tsx"
+        "paths": ["dynamic-load/App_lazy-load-component.tsx"]
       },
       {
         "name": "Load with lazy with click",
-        "path": "dynamic-load/App_lazy-load-component-with-click.tsx"
+        "paths": ["dynamic-load/App_lazy-load-component-with-click.tsx"]
       },
       {
         "name": "Regular without lazy",
-        "path": "dynamic-load/App_without-lazy-load.tsx"
+        "paths": ["dynamic-load/App_without-lazy-load.tsx"]
       }
     ],
     "async/suspense": [
       {
         "name": "Suspense with use API",
-        "path": "suspense/App_suspense-with-use.tsx"
+        "paths": ["suspense/App_suspense-with-use.tsx"]
       },
       {
         "name": "Suspense with use API and error boundary",
-        "path": "suspense/App_suspense-with-use-error-boundary.tsx"
+        "paths": ["suspense/App_suspense-with-use-error-boundary.tsx"]
       }
     ],
     "api/use": [
       {
         "name": "Use",
-        "path": "use/App_use.tsx"
+        "paths": ["use/App_use.tsx"]
       }
     ],
     "browser-api/local-storage": [
       {
         "name": "Local Storage Dynamic Value",
-        "path": "local-storage/App_local-storage-dynamic-value.tsx"
+        "paths": ["local-storage/App_local-storage-dynamic-value.tsx"]
       },
       {
         "name": "Local Storage Hook",
-        "path": "local-storage/App_local-storage-hook.tsx"
+        "paths": ["local-storage/App_local-storage-hook.tsx"]
       },
       {
         "name": "Local Storage Immediate Value",
-        "path": "local-storage/App_local-storage-immediate-value.tsx"
+        "paths": ["local-storage/App_local-storage-immediate-value.tsx"]
       }
     ],
     "Components/modal": [
       {
         "name": "Overlay",
-        "path": "component-snippets/modal/App_overlay.tsx"
+        "paths": ["component-snippets/modal/App_overlay.tsx"]
       }
     ]
   }

@@ -9,7 +9,7 @@ import examplesData from './examples/examples.json'
 import { ExampleItem } from './types/ExampleItem.ts';
 
 export default function Playground() {
-  const [selectedExample, setSelectedExample] = useState<ExampleItem>({name: "home", path: "App_default.tsx"});
+  const [selectedExample, setSelectedExample] = useState<ExampleItem>({name: "home", paths: ["App_default.tsx"]});
 
   const handleExampleSelect = (item: ExampleItem) => {
     if (item.path || item.paths) {

@@ -56,6 +56,15 @@
         "paths": ["hooks/use-transition/App_hooks-use-transition.tsx"]
       }
     ],
+    "hooks/use-spin-delay": [
+      {
+        "name": "Use Spin Delay",
+        "paths": [
+          "hooks/use-spin-delay/App_hooks-use-spin-delay.css",
+          "hooks/use-spin-delay/App_hooks-use-spin-delay.tsx"
+        ]
+      }
+    ],
     "styles": [
       {
         "name": "3 Ways Adding Style",

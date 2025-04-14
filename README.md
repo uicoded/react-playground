@@ -29,8 +29,7 @@ Looking at `main.tsx` you can see that there is `Playground` component that eigh
 
 ### Serving
 
-To start a local server after a successful build (serving from the `dist` folder) run `npm run serve`.
-It uses [serve](https://www.npmjs.com/package/serve).
+To start a local server after successful build (serving static files from the `dist` folder) run `npm run preview` (or `npx vite preview`). Or alternatively use provided [serve](https://www.npmjs.com/package/serve) server and start it by `npm run serve`.
 
 ## Prerequisites
 

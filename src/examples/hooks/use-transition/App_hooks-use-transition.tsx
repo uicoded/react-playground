@@ -42,13 +42,30 @@ function Message({ planetOrError }: { planetOrError: Planet | 'error' }) {
 }
 
 export default function App() {
-  // ✅ Use the useTransition hook to manage transition
+  /*
+  ✅ Use the useTransition hook to manage transition by getting handle of pending state and startTransition function.
+
+  https://react.dev/reference/react/useTransition
+
+  👉 Use it to prevent certain UI updates when component is suspended (here disable the select when data is loading)
+  👉 Use it to mark state updates as non-urgent transitions, allowing React to prioritize more critical updates
+    (e.g., user interactions like typing or clicking) to keep the UI responsive.
+
+  `isPending`: A boolean indicating whether the transition is in progress.
+  `startTransition`: A function you wrap around state updates to mark them as transitions.
+
+  - Wrap state updates in startTransition(() => { ... }) to mark them as non-urgent.
+  - React processes these updates in the background, prioritizing urgent updates (e.g., direct user input) first.
+  - While the transition is pending, isPending is true, allowing you to show a loading state.
+  - If the component is wrapped in a <Suspense> boundary (for cases like lazy-loaded components or data fetching),
+    React can show a fallback UI while the transition is pending.
+  */
   const [isPending, startTransition] = useTransition();
   const [selected, setSelected] = useState<Planet | 'error' | ''>('');
 
   function handleSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const value = e.target.value as Planet | 'error' | '';
-
+    // ✅ Mark this state update as a transition
     startTransition(() => {
       setSelected(value);
     });
@@ -86,10 +103,18 @@ export default function App() {
 
 /**
   * useTransition hook advantages:
-  * 1. Allows marking state updates as non-urgent transitions
-  * 2. Prevents UI freezing during heavy updates
-  * 3. Shows pending state while transition is in progress
-  * 4. Keeps UI responsive by not blocking user interactions
-  * 5. Works well with Suspense for loading states 👈
-  * 6. Helps prioritize urgent updates over non-urgent ones
+  * - Allows marking state updates as non-urgent transitions
+  * - Prevents UI freezing during heavy updates
+  * - Shows pending state while transition is in progress
+  * - Keeps UI responsive by not blocking user interactions
+  * - Works well with Suspense for loading states 👈
+  * - Helps prioritize urgent updates over non-urgent ones
+  *
+  * Common Pitfalls:
+  * - Don’t Use for Urgent Updates: Avoid wrapping critical updates (like form submissions or immediate UI feedback)
+  *   in startTransition, as they might be delayed.
+  * - Suspense Boundaries: If you’re using useTransition with dynamic imports or data fetching,
+  *   ensure the component is wrapped in a <Suspense> boundary, or the app might not behave as expected.
+  * - Not a Replacement for Debouncing: If you need to limit the frequency of updates (e.g., for search inputs),
+  *   you might still need debouncing or throttling in addition to useTransition.
   */

@@ -1,5 +1,5 @@
 // For the 2nd example CSS Modules
-// When you name a file with *.module.css, build tools like Vite recognize 
+// When you name a file with *.module.css, build tools like Vite recognize
 // this convention and process the file as a CSS Module.
 //
 // CSS Modules is a specification/methodology that:
@@ -97,3 +97,12 @@ export default function App() {
     </>
   );
 }
+
+/**
+ * There a another option to inline style with <style> tag added to the bottom of the component
+
+  <style>{`
+   .todo-item { /* CSS rules * / }
+  `}</style>
+
+ */

@@ -34,6 +34,12 @@
         "paths": ["hooks/use-effect/App_hooks-use-effect-set-interval.tsx"]
       }
     ],
+    "hooks/use-form-status": [
+      {
+        "name": "Use Form Status",
+        "paths": ["hooks/use-form-status/App_hooks-use-form-status.tsx"]
+      }
+    ],
     "hooks/use-ref": [
       {
         "name": "Use Ref NW",

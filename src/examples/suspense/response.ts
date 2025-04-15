@@ -49,7 +49,7 @@ const getResponse = (type: 'earth' | 'mars' | 'error' = 'earth'): Promise<Respon
     default:
       return new Promise<Response>((resolve) =>
         setTimeout(() => {
-          const data: ResponseData = { data: "Hello, World! 🌍" };
+          const data: ResponseData = { data: "Hello, Earth! 🌍" };
           resolve(new Response(JSON.stringify(data), {
             status: 200,
             headers: { 'Content-Type': 'application/json' }

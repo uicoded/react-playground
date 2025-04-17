@@ -1,0 +1,39 @@
+/*
+
+  ⚠️ CSS modules typically don't support this nesting syntax by default unless you have a specific
+   CSS processor configured.
+
+ .shipment-form {
+  margin: 2em auto;
+  label {
+    display: block;
+    padding: .2em;
+  }
+}
+*/
+
+/*
+  ⚠️ Also forget about .shippment-form {}. It needs to be camelCase.
+*/
+
+.shipmentForm {
+  margin: 2em auto;
+}
+
+.shipmentForm label {
+  display: block;
+  padding: .2em;
+}
+
+.shipmentForm input,
+.shipmentForm select {
+  margin-left: 2em;
+}
+
+.shipmentForm button[type="submit"] {
+  margin: 1em 0;
+}
+
+.shipmentLabelContent p {
+  margin: 0;
+}

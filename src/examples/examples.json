@@ -62,6 +62,12 @@
         "paths": ["hooks/use-transition/App_hooks-use-transition.tsx"]
       }
     ],
+    "hooks/use-optimistic": [
+      {
+        "name": "Use Optimistic",
+        "paths": ["hooks/use-optimistic/App_hooks-use-optimistic-form.tsx"]
+      }
+    ],
     "hooks/use-spin-delay": [
       {
         "name": "Use Spin Delay",

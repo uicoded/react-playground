@@ -64,8 +64,12 @@
     ],
     "hooks/use-optimistic": [
       {
-        "name": "Use Optimistic",
+        "name": "Use Optimistic Form",
         "paths": ["hooks/use-optimistic/App_hooks-use-optimistic-form.tsx"]
+      },
+      {
+        "name": "Use Optimistic Message",
+        "paths": ["hooks/use-optimistic/App_hooks-use-optimistic-message.tsx"]
       }
     ],
     "hooks/use-spin-delay": [

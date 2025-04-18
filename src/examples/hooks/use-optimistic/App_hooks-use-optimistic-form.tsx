@@ -98,31 +98,49 @@ export default function App() {
     }
   );
 
-  // Shipping action with delay
+  // Shipping action with error handling
   async function shipAction(formData: FormData): Promise<void> {
     // Show optimistic UI immediately
     addOptimisticShipment(formData);
 
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      // Simulate API delay
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Simulate random failure (for demonstration)
+          if (Math.random() < 0.5) { // 50% chance of failure
+            reject(new Error("Shipping service unavailable"));
+          } else {
+            resolve(null);
+          }
+        }, 2000);
+      });
 
-    const name = formData.get("name") as string;
-    const description = formData.get("description") as string;
-    const weight = Number(formData.get("weight"));
-    const carrier = formData.get("carrier") as "usps" | "ups" | "fedex";
+      const name = formData.get("name") as string;
+      const description = formData.get("description") as string;
+      const weight = Number(formData.get("weight"));
+      const carrier = formData.get("carrier") as "usps" | "ups" | "fedex";
 
-    const newShipment: ShippingItem = {
-      name,
-      description,
-      weight,
-      carrier,
-      status: "Shipped"
-    };
+      const newShipment: ShippingItem = {
+        name,
+        description,
+        weight,
+        carrier,
+        status: "Shipped"
+      };
 
-    // Update the actual state after the "API call" completes
-    setShipment(newShipment);
+      // Update the actual state after the "API call" completes
+      setShipment(newShipment);
+    } catch (error) {
+      // On error, revert to the previous state by setting shipment to its current value
+      // This will cause optimisticShipment to revert as well
+      setShipment(shipment);
+
+      // Optionally, show an error message
+      console.error("Shipping failed:", error);
+      alert(`Shipping failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
   }
-
   // Check if the shipment is in pending state
   const isShipmentPending = optimisticShipment?.status === "Pending...";
 

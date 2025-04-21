@@ -1,0 +1,43 @@
+.container {
+  min-height: 100px;
+}
+
+.message {
+  padding: 10px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.resultsList {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.resultsList.empty {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.resultItem {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  transform: translateY(10px);
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

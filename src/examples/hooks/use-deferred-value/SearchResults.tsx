@@ -14,11 +14,21 @@ export default function SearchResult({query} : {query: string}) {
   }, [query]);
 
   return (
-    <ul>
-      {results.map(result => (
-        <li key={result.id}>{result.title}</li>
-      ))}
-    </ul>
-  )
+    <div>
+      {query === '' ? (
+        <p>Start typing to search albums</p>
+      ) : (
+        <ul>
+          {results.length > 0 ? (
+            results.map(result => (
+              <li key={result.id}>{result.title}</li>
+            ))
+          ) : (
+            // this will blink the result in between getting the results
+            <li>No albums found</li>
+          )}
+        </ul>
+      )}
+    </div>
+  );
 }
-

@@ -1,17 +1,18 @@
-import { useEffect, useState} from 'react'
-import { albumService, Album } from "./albums";
+import { useDeferredValue, useMemo, use } from 'react';
+import { albumService } from "./albums";
 
-// Component to display result of album query
-export default function SearchResult({query} : {query: string}) {
-  const [results, setResults] = useState<Album[]>([]);
+export default function SearchResult({ query }: { query: string }) {
+  // Defer the query value to avoid blocking the UI during typing
+  const deferredQuery = useDeferredValue(query);
 
-  useEffect(() => {
-    const fetchResults = async () => {
-      const data = await albumService(query);
-      setResults(data);
-    };
-    fetchResults();
-  }, [query]);
+  // Create the promise for the deferred query
+  const albumPromise = useMemo(() =>
+    albumService(deferredQuery),
+    [deferredQuery]
+  );
+
+  // Use the promise directly with the use() hook
+  const results = use(albumPromise);
 
   return (
     <div>

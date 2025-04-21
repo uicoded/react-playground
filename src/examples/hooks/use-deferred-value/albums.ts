@@ -14,17 +14,35 @@ export const prodigyAlbums: Album[] = [
   { id: 7, title: "No Tourists", year: 2018 }
 ];
 
+// Cache for album queries
+const albumCache = new Map<string, Promise<Album[]>>();
 
 export const albumService = async (query: string): Promise<Album[]> => {
-
   // Return empty array if query is empty or less than 1 character
   if (query.length === 0) {
     return [];
   }
 
-  // fake delay
-  await new Promise(resolve => setTimeout(resolve, 500));
+  // Check cache first
+  if (albumCache.has(query)) {
+    return albumCache.get(query)!;
+  }
 
-  // filter albums by query
-  return prodigyAlbums.filter(album => album.title.toLowerCase().includes(query.toLowerCase()));
+  // Create a new promise for this query
+  const albumPromise = new Promise<Album[]>(async (resolve) => {
+    // fake delay
+    await new Promise(r => setTimeout(r, 500));
+
+    // filter albums by query
+    const results = prodigyAlbums.filter(album =>
+      album.title.toLowerCase().includes(query.toLowerCase())
+    );
+
+    resolve(results);
+  });
+
+  // Store in cache
+  albumCache.set(query, albumPromise);
+
+  return albumPromise;
 }

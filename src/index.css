@@ -110,7 +110,7 @@ textarea:focus {
   outline: 3px solid #4d90fe;
   outline-offset: 2px;
   box-shadow: 0 0 0 2px rgba(77, 144, 254, 0.5);
-  text-decoration: underline; /* Additional indicator for links */
+  /* text-decoration: underline; /* Additional indicator for links */
 }
 /* End of Focus */
 

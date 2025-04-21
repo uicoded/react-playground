@@ -72,6 +72,12 @@
         "paths": ["hooks/use-optimistic/App_hooks-use-optimistic-message.tsx"]
       }
     ],
+    "hooks/use-deferred-value": [
+      {
+        "name": "Use Deferred Value",
+        "paths": ["hooks/use-deferred-value/App_hooks-use-deferred-value.tsx"]
+      }
+    ],
     "hooks/use-spin-delay": [
       {
         "name": "Use Spin Delay",
